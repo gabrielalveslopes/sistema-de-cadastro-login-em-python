@@ -55,8 +55,8 @@ def login():
         if usuarios[usuario]['senha'] == senha:   # compara a senha digitada com a cadastrada
             print(f'Login realizado com sucesso! Bem-vindo, {usuario}')
             if usuario == "admin1":
-             for nome in usuarios:
-                print("nome:", nome,"senha:",senha)
+             for nome,dados in usuarios.items():
+                print("nome:", nome,"senha:",dados['senha'])
                                 
             return   # sai da função se logar certo
                     
